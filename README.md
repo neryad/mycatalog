@@ -34,6 +34,9 @@ https://fakestoreapi.com/
 
 Se trabajara en dos ramas una master y una de desarrollo.
 
+- En la de desarrollo se haran trabajaran los issues, una vez culmidado se realizara pull request hacia master.
+  \_ En master estra el codigo final.
+
 ## Menejos de issues y progreso de trabajo.
 
 Se creo project donde se estableceran los issues por hacer y asi tener un tracking de lo que se esta trabajando.
