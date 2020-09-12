@@ -42,7 +42,7 @@ Se creo project donde se estableceran los issues por hacer y asi tener un tracki
 - Cada integrante puede ir creado issue nuevo a la medida que vaya avanzado.
 - La asignacion de los issues lo puedes hacer cada integrante de forma individual.
 
-favor de ir a la pestaña de ['project'](https://github.com/neryad/mycatalog/projectss)
+favor de ir a la pestaña de [project](https://github.com/neryad/mycatalog/projects/1)
 
 ## UI de guia para el app
 
