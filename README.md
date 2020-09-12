@@ -36,7 +36,13 @@ Se trabajara en dos ramas una master y una de desarrollo.
 
 ## Menejos de issues y progreso de trabajo.
 
-Se creo project donde se estableceran los issues por hacer y asi tener un tracking de lo que se esta trabajando, lo que se trabajo y lo que falta.
+Se creo project donde se estableceran los issues por hacer y asi tener un tracking de lo que se esta trabajando.
+
+# To do : issues que se deben hacer.
+
+# Progress : issues que se esta trabajando.
+
+# Complete : issues completados.
 
 - Se creara issues basico al inicar el proyecto.
 - Cada integrante puede ir creado issue nuevo a la medida que vaya avanzado.
