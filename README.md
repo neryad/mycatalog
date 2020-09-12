@@ -35,7 +35,7 @@ https://fakestoreapi.com/
 Se trabajara en dos ramas una master y una de desarrollo.
 
 - En la de desarrollo se haran trabajaran los issues, una vez culmidado se realizara pull request hacia master.
-  \_ En master estra el codigo final.
+- En master estra el codigo final.
 
 ## Menejos de issues y progreso de trabajo.
 
@@ -47,8 +47,8 @@ Se creo project donde se estableceran los issues por hacer y asi tener un tracki
 
 ##### - Complete : issues completados.
 
-- Se creara issues basico al inicar el proyecto.
-- Cada integrante puede ir creado issue nuevo a la medida que vaya avanzado.
+- Se crearon issues basico al inicar el proyecto.
+- Cada integrante puede y deber ir creado issue nuevo a la medida que vaya avanzado.
 - La asignacion de los issues lo puedes hacer cada integrante de forma individual.
 
 favor de ir a la pestaña de [project](https://github.com/neryad/mycatalog/projects/1)
