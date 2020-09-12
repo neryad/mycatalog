@@ -34,7 +34,7 @@ https://fakestoreapi.com/
 
 Se trabajara en dos ramas una master y una de desarrollo.
 
-## Menejos de issus y progreso de trabajo.
+## Menejos de issues y progreso de trabajo.
 
 Se creo project donde se estableceran los issues por hacer y asi tener un tracking de lo que se esta trabajando, lo que se trabajo y lo que falta.
 
@@ -42,7 +42,7 @@ Se creo project donde se estableceran los issues por hacer y asi tener un tracki
 - Cada integrante puede ir creado issue nuevo a la medida que vaya avanzado.
 - La asignacion de los issues lo puedes hacer cada integrante de forma individual.
 
-favor de ir a la pestaña de project
+favor de ir a la pestaña de ['project'](https://github.com/neryad/mycatalog/projectss)
 
 ## UI de guia para el app
 
