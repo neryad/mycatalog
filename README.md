@@ -36,8 +36,15 @@ Se trabajara en dos ramas una master y una de desarrollo.
 
 ## Menejos de issus y progreso de trabajo.
 
-Es posible que s crear un proyect donde se estableceran las cosas por hacer y asi tener un tracking de lo trabajado. favor de ir a la pestaña de project
+Se creo project donde se estableceran los issues por hacer y asi tener un tracking de lo que se esta trabajando, lo que se trabajo y lo que falta.
+
+- Se creara issues basico al inicar el proyecto.
+- Cada integrante puede ir creado issue nuevo a la medida que vaya avanzado.
+- La asignacion de los issues lo puedes hacer cada integrante de forma individual.
+
+favor de ir a la pestaña de project
 
 ## UI de guia para el app
 
+Esta sera la ui guia y base a seguir para realziar el proyecto.
 ![picture](maxresdefault.jpg)
