@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycatalog/services/apiServices.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key key}) : super(key: key);
@@ -7,8 +8,16 @@ class Categories extends StatefulWidget {
   _CategoriesState createState() => _CategoriesState();
 }
 
+final apiServices = new ApiServices();
+
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Hang bag", "Jewellrty", "Footwear", "Dresses"];
+  List<String> categories = [
+    "All",
+    "women clothing",
+    "electronics",
+    "jewelery",
+    "men clothing"
+  ];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -29,6 +38,7 @@ class _CategoriesState extends State<Categories> {
       onTap: () {
         setState(() {
           selectedIndex = index;
+          apiServices.selectCategroty = categories[index];
         });
       },
       child: Padding(

@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:mycatalog/pages/details_page.dart';
+import 'package:mycatalog/services/apiServices.dart';
 import 'package:mycatalog/widgets/itemCard.dart';
 
 import 'categories.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key key}) : super(key: key);
-
+  final String wawa;
+  const Body({Key key, this.wawa}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final apiServices = new ApiServices();
+    var products = [];
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(
-            "Woman",
+            "My Catalog",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
           ),
         ),
@@ -22,19 +27,35 @@ class Body extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: GridView.builder(
+            child: FutureBuilder(
+              future: apiServices.getProducts(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                if (!snapshot.hasData) {
+                  return Center(child: Text('No data'));
+                }
+                products = snapshot.data;
 
-                //Cambiar por el lenght de los productos
-                itemCount: 6,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.75,
-                    mainAxisSpacing: 20.0,
-                    crossAxisSpacing: 20.0),
-                //pasar al item card el products => products: porudct
-                itemBuilder: (context, index) => ItemCard()),
+                return GridView.builder(
+                    itemCount: products.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.75,
+                        mainAxisSpacing: 20.0,
+                        crossAxisSpacing: 20.0),
+                    itemBuilder: (context, index) => ItemCard(
+                          products: products[index],
+                          press: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DetailsPage(
+                                  product: products[index],
+                                ),
+                              )),
+                        ));
+              },
+            ),
           ),
-        )
+        ),
       ],
     );
   }

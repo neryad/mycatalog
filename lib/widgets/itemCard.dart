@@ -8,30 +8,33 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Expanded(
-            child: Container(
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Expanded(
               child: Container(
-                height: 160,
-                width: 160,
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(16)),
-                child: Image.network(
-                    'https://github.com/abuanwar072/E-commerce-App-UI-Flutter/blob/master/assets/images/bag_1.png?raw=true'),
+                child: Container(
+                  height: 160,
+                  width: 160,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Image.network(products.image),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0 / 4),
-            child: Text(
-              'Titulo aqui',
-              style: TextStyle(color: Colors.black38),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0 / 4),
+              child: Text(
+                products.title,
+                style: TextStyle(color: Colors.black38),
+              ),
             ),
-          ),
-          Text("\$234", style: TextStyle(fontWeight: FontWeight.bold))
-        ]);
+            Text("\$${products.price}",
+                style: TextStyle(fontWeight: FontWeight.bold))
+          ]),
+    );
   }
 }
