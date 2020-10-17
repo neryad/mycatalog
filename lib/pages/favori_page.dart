@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mycatalog/services/apiServices.dart';
 import 'package:mycatalog/widgets/body.dart';
@@ -50,7 +52,7 @@ class Favorite extends StatelessWidget {
                     );
                   }
                   return ListView.builder(
-                      itemCount: 5,
+                      itemCount: radomFav(),
                       itemBuilder: (context, index) => ListTile(
                             title: Text((products[index].title)),
                             trailing: Icon(Icons.arrow_forward_ios),
@@ -94,5 +96,15 @@ class Favorite extends StatelessWidget {
         )
       ],
     );
+  }
+
+  radomFav() {
+    Random rnd;
+    int min = 1;
+    int max = 7;
+    rnd = new Random();
+    int r = min + rnd.nextInt(max - min);
+    print("$r is in the range of $min and $max");
+    return r;
   }
 }
