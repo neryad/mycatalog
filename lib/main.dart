@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycatalog/pages/favori_page.dart';
 import 'package:mycatalog/pages/homePage.dart';
 import 'package:mycatalog/services/apiServices.dart' as wawa;
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         'home': (BuildContext context) => HomePage(),
+        'favorites': (BuildContext context) => Favorite(),
       },
       home: HomePage(),
     );

@@ -17,12 +17,13 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Text(
-            "My Catalog",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-          ),
-        ),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Container()
+            // Text(
+            //   "My Catalog",
+            //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+            // ),
+            ),
         Categories(),
         Expanded(
           child: Padding(
@@ -31,9 +32,19 @@ class Body extends StatelessWidget {
               future: apiServices.getProducts(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (!snapshot.hasData) {
-                  return Center(child: Text('No data'));
+                  return Center(
+                      child: CircularProgressIndicator(
+                    //backgroundColor: Colors.black,
+                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.black),
+                  ));
                 }
+
                 products = snapshot.data;
+                if (products.length == 0) {
+                  return Center(
+                    child: Text('No data'),
+                  );
+                }
 
                 return GridView.builder(
                     itemCount: products.length,
